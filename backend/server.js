@@ -2,6 +2,10 @@ const app = (fastify = require('fastify')({
   logger: { level: 'warn' },
 }));
 
+app.register(require('fastify-cors'), {
+  origin: '*',
+});
+
 app.register(require('fastify-swagger'), {
   routePrefix: '/docs',
   exposeRoute: true,
