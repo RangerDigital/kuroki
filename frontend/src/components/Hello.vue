@@ -37,7 +37,7 @@
       },
     },
     mounted() {
-      this.axios.defaults.baseURL = 'https://api.kuroki.bednarski.dev';
+      this.axios.defaults.baseURL = 'https://api.kuroki.bednarski.dev/v1';
 
       this.getNode();
     },
