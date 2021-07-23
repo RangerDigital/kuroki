@@ -23,7 +23,7 @@ async function routes(router) {
     },
     async (req, res) => {
       const time = Date.now();
-      const version = '0.5';
+      const version = '0.6';
 
       return res.send({ name: name, time: time, version: version });
     }
