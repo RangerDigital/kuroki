@@ -14,13 +14,16 @@ async function routes(router) {
             type: 'object',
             properties: {
               name: { type: 'string' },
+              time: { type: 'string' },
             },
           },
         },
       },
     },
     async (req, res) => {
-      return res.send({ name: name });
+      const time = Date.now();
+
+      return res.send({ name: name, time: time });
     }
   );
 }
