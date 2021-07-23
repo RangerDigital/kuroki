@@ -39,7 +39,10 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,value={{branch}}-${{ date +%s }}
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            type=raw,value={{branch}}-${{ github.run_number }}
 
 
       # Build and push Docker image with Buildx
