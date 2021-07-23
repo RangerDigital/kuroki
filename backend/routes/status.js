@@ -15,6 +15,7 @@ async function routes(router) {
             properties: {
               name: { type: 'string' },
               time: { type: 'string' },
+              version: { type: 'string' },
             },
           },
         },
@@ -22,8 +23,9 @@ async function routes(router) {
     },
     async (req, res) => {
       const time = Date.now();
+      const version = '0.1';
 
-      return res.send({ name: name, time: time });
+      return res.send({ name: name, time: time, version: version });
     }
   );
 }
