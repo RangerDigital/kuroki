@@ -3,7 +3,7 @@
     <h1 class="mx-1 text-6xl font-semibold text-center text-primary font-heading">Hello World! ~ Kuroki</h1>
     <p class="mx-1 my-8 text-lg text-center text-white"
       >This request was served by <span class="text-primary">Cloudflare Pages</span> and <span class="text-primary">Kubernetes</span> pod with the name
-      <span class="text-primary">{{ node }} v.{{ version }}</span
+      <span class="text-primary">{{ node }} v{{ version }}</span
       >.</p
     >
 
